@@ -1,0 +1,17 @@
+package com.jocajica.android.androidchat.chat;
+
+import com.jocajica.android.androidchat.chat.events.ChatEvent;
+
+/**
+ * Created by avalo.
+ */
+public interface ChatPresenter {
+    void onPause();
+    void onResume();
+    void onCreate();
+    void onDestroy();
+
+    void setChatRecipient(String recipient);
+    void sendMessage(String msg);
+    void onEventMainThread(ChatEvent event);
+}
